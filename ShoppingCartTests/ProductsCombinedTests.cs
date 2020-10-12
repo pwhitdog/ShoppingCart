@@ -46,5 +46,16 @@ namespace ShoppingCartTests
             _terminal.Scan("D");
             Assert.AreEqual(15.40m, _terminal.Total());
         }
+        
+        [Test]
+        public void Scanned_Items_ABCDx_Are_Fifteen_Dollars_Forty()
+        {
+            _terminal.Scan("A");
+            _terminal.Scan("B");
+            _terminal.Scan("C");
+            _terminal.Scan("D");
+            _terminal.Scan("x");
+            Assert.AreEqual(15.40m, _terminal.Total());
+        }
     }
 }

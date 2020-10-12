@@ -13,7 +13,7 @@ namespace ShoppingCartLibrary
         
         public void Scan(string item)
         {
-            switch (item)
+            switch (item.ToUpper())
             {
                 case "A":
                     _total += 2.00m;
@@ -36,8 +36,6 @@ namespace ShoppingCartLibrary
                     break;
                 case "D":
                     _total += .15m;
-                    break;
-                default:
                     break;
             }
         }
